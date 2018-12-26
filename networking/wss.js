@@ -18,7 +18,7 @@ module.exports = function(wss) {
 				throw e;
 			}
 
-			let device = Device.maager().get(message.deviceid);
+			let device = Device.manager().get(message.deviceid);
 
 			if(!device) {
 				// WHAT THE FUCK
