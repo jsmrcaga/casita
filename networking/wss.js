@@ -3,6 +3,7 @@ const Device = require('../devices/device');
 
 module.exports = function(wss) {
 	wss.on('connection', ws => {
+		redfox.info('[WSS] New connection!');
 		// wait for connection
 		let firstHandling =  message => {
 			redfox.info('[WSS] MESSAGE', message);
