@@ -5,6 +5,7 @@ module.exports = function(wss) {
 	wss.on('connection', ws => {
 		// wait for connection
 		let firstHandling =  message => {
+			redfox.info('[WSS] MESSAGE', message);
 			try {
 				let data = JSON.parse(message);
 
